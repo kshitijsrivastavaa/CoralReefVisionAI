@@ -89,9 +89,6 @@ coralsight/
 - [ ] Export functionality
 - [ ] Batch processing
 
-##  Team
-
-Final Year Project - [Unnati Bhardwaj, Kshitij Srivastava]
 
 ##  License
 

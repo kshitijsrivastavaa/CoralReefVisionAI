@@ -15,7 +15,7 @@ The project integrates:
 
 # 🚀 Live Demo
 
-Frontend deployed using Netlify: #(NOT BACKEND _ CAN BE USED ONLY LOCALLY)
+Frontend deployed using Netlify:  (NOT BACKEND _ CAN BE USED ONLY LOCALLY)
 
 🔗 https://shiny-bunny-ba12ea.netlify.app/
 

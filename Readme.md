@@ -96,4 +96,4 @@ This project is for educational purposes as part of a final year project.
 
 ---
 
-**Note**: This is currently a frontend demonstration. Backend integration with the actual AI model will be implemented in the final phase.
+**Note**: This is currently a frontend demonstration. Backend integration with the actual AI model will be implemented after a local run.

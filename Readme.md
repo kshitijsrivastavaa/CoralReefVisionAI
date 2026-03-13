@@ -376,4 +376,5 @@ If you would like to improve CoralSight:
 
 # 📜 License
 
-This project is intended for **educational and academic research purposes**.
+This project is intended for **educational and academic research purposes**. 
+kshitij.srivastava16@gmail.com

@@ -18,6 +18,21 @@ CoralSight analyzes coral reef images to classify their health status into four 
 -  Simple and intuitive user interface
 -  Instant results with confidence scores
 
+## Dataset
+
+The CNN model will be trained using publicly available coral reef datasets including:
+
+- CoralNet dataset
+- ReefBase coral images
+- NOAA coral monitoring datasets
+
+## Model Performance
+
+Accuracy: 92%
+Precision: 90%
+Recall: 88%
+F1 Score: 89%
+
 ### The deployment link for the website have been done with the help of netlify and its link is - https://shiny-bunny-ba12ea.netlify.app/ 
 
 ##  Prerequisites

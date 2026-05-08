@@ -11,7 +11,7 @@
 <a href="https://shiny-bunny-ba12ea.netlify.app/">
   <img src="https://img.shields.io/badge/🌐_Live_Demo-Netlify-00C7B7?style=for-the-badge&labelColor=0d7377" />
 </a>
-<a href="#">
+<a href="https://github.com/user-attachments/assets/629f8b71-8537-4b70-a256-738d971ee59c">
   <img src="https://img.shields.io/badge/🎬_Demo_Video-Watch_Now-FF4757?style=for-the-badge&labelColor=c0392b" />
 </a>
 <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -34,7 +34,7 @@
 
 <div align="center">
 
-> 🔗 **[▶️ Watch Full Demo — ADD YOUR VIDEO LINK HERE](https://github.com/kshitijsrivastavaa/CoralReefVisionAI)**
+> 🔗 **https://github.com/kshitijsrivastavaa/CoralReefVisionAI**
 
 </div>
 

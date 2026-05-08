@@ -1,380 +1,348 @@
+<div align="center">
+
 # 🌊 CoralSight — AI Coral Reef Health Assessment
 
-CoralSight is an **AI-assisted coral reef health assessment system** that analyzes underwater reef images to estimate bleaching or stress levels using computer vision segmentation techniques and a planned deep learning segmentation architecture.
+**An AI-powered full-stack system for coral reef bleaching detection, damage quantification, and marine ecosystem monitoring using computer vision and deep learning.**
 
-The system combines **OpenCV-based image processing with a planned U-Net CNN deep learning model** to identify damaged coral regions and compute the **percentage of affected coral area**.
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Netlify-00C7B7?style=for-the-badge)](https://shiny-bunny-ba12ea.netlify.app/)
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![React](https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
+[![Flask](https://img.shields.io/badge/Flask-API-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
 
-The project integrates:
-
-- React frontend
-- Flask backend API
-- Computer vision processing pipeline
-- Deep learning architecture for semantic segmentation
-
----
-
-# 🚀 Live Demo
-
-Frontend deployed using Netlify:  (NOT BACKEND _ CAN BE USED ONLY LOCALLY)
-
-🔗 https://shiny-bunny-ba12ea.netlify.app/
+</div>
 
 ---
 
-# 📌 Project Overview
+## 📽️ Demo Video
 
-Coral reefs are among the most biologically diverse ecosystems on Earth, but they are increasingly threatened by environmental stressors such as rising sea temperatures, pollution, and ocean acidification.
+> 🎬 **[Watch Full Demo Here → ADD YOUR VIDEO LINK]**
 
-One of the most visible impacts is **coral bleaching**, where corals lose their symbiotic algae and turn white.
-
-Manual reef monitoring is **time-consuming, costly, and difficult to scale**.
-
-CoralSight aims to support marine researchers by providing an **automated AI-assisted coral health analysis system** capable of detecting damaged reef regions from underwater imagery.
-
----
-
-# 🎯 Core Problem Addressed
-
-Coral reefs face several environmental threats including:
-
-- Rising ocean temperatures  
-- Marine pollution  
-- Ocean acidification  
-- Coral disease outbreaks  
-- Algae overgrowth  
-
-Traditional reef monitoring requires **manual inspection by divers or marine researchers**, which limits the scale and frequency of monitoring.
-
-CoralSight automates part of this process by performing **image-based coral health assessment using computer vision and deep learning techniques**.
+The demo showcases:
+- Uploading real underwater coral reef photographs
+- Live HSV segmentation overlay rendering over the original image
+- Coral damage percentage calculated instantly
+- Interactive pie chart showing healthy vs. affected area breakdown
+- Multiple reef images tested — ranging from 7.25% to 40.39% affected area
 
 ---
 
-# 🏗 System Architecture
+## 📸 What It Looks Like
+
+| Original Reef Image | AI Segmentation Overlay |
+|---|---|
+| Raw underwater coral photograph | Pink/red overlay highlighting bleached & damaged coral regions |
+
+**Output includes:**
+- Side-by-side original vs. segmented view
+- `Affected Area: X.XX%` — precise damage percentage
+- Interactive damage distribution pie chart with hover tooltips
+
+---
+
+## 🌍 Why This Exists
+
+Coral reefs cover less than 1% of the ocean floor but support over 25% of all marine species. They are under severe threat from:
+
+- 🌡️ Rising ocean temperatures causing mass bleaching events
+- 🧪 Ocean acidification dissolving coral structures
+- 🏭 Marine pollution and runoff
+- 🦠 Coral disease outbreaks
+- 🌿 Algae overgrowth smothering healthy reefs
+
+Traditional monitoring relies on **manual diver surveys** — slow, expensive, and impossible to scale. CoralSight automates reef health assessment from a single photograph, making large-scale monitoring accessible to researchers, conservationists, and institutions worldwide.
+
+---
+
+## ✅ Working Features
+
+### 🔬 Computer Vision Segmentation Pipeline (Live & Functional)
+- Upload any underwater coral reef image via the web interface
+- Image is sent to the Flask backend and processed through an **HSV color segmentation pipeline**
+- Bleached/stressed coral regions (high brightness, low saturation) are detected automatically
+- **Morphological filtering** cleans noise and sharpens the mask
+- A **pink/red overlay** is rendered on the original image highlighting damaged zones
+- Results returned to the frontend and displayed in real-time
+
+### 📊 Coral Damage Quantification (Live & Functional)
+- Calculates the **exact percentage of affected reef area** per image
+- Results displayed as `Affected Area: X.XX%`
+- Tested across multiple real coral images with varying damage levels (7–40% range seen in demo)
+
+### 🥧 Interactive Damage Distribution Chart (Live & Functional)
+- Pie chart rendering healthy vs. affected coral proportions
+- **Hover tooltips** show exact values (e.g., `Healthy: 92.75`, `Affected: 7.25`)
+- Built with a charting library for smooth interactive UX
+
+### 🖼️ Side-by-Side Comparison View (Live & Functional)
+- Original Image displayed on the left
+- AI Segmentation Overlay displayed on the right
+- Enables immediate visual verification of what the algorithm detected
+
+### 🤖 U-Net Deep Learning Architecture (Implemented, Training-Ready)
+- Full **encoder–decoder U-Net CNN** implemented in TensorFlow/Keras
+- Designed for 4-class pixel-wise segmentation:
+  - Healthy coral
+  - Bleached coral
+  - Diseased coral
+  - Algae-covered coral
+- Input: `224 × 224 × 3` RGB images
+- Output: Pixel-wise segmentation map
+- Architecture complete — awaiting labeled dataset for training run
+
+---
+
+## 🏗️ System Architecture
 
 ```
-User Upload Image
-        ↓
-React Frontend Interface
-        ↓
-Flask Backend API
-        ↓
-Image Preprocessing (OpenCV)
-        ↓
-Segmentation Algorithm
-        ↓
-Mask Generation
-        ↓
-Damage Percentage Calculation
-        ↓
-Overlay Visualization
-        ↓
-Results Displayed on Frontend
-```
-
----
-
-# 🛠 Technologies Used
-
-## Frontend
-
-- React (Vite)
-- JavaScript (ES6+)
-- HTML5
-- CSS3
-- Tailwind CSS
-
-Purpose:
-
-- User interface
-- Image upload
-- Visualization of segmentation overlay
-- Display of coral damage statistics
-
----
-
-## Backend
-
-- Python 3.x
-- Flask
-- Flask-CORS
-
-Purpose:
-
-- API for image processing
-- Execution of segmentation algorithms
-- Returning analysis results to frontend
-
----
-
-## Computer Vision Libraries
-
-- OpenCV  
-- NumPy  
-
-Purpose:
-
-- Image preprocessing  
-- Color space transformation  
-- Segmentation mask generation  
-- Coral damage area estimation  
-- Overlay visualization  
-
----
-
-## Deep Learning Framework (Architecture Included)
-
-- TensorFlow  
-- Keras  
-
-Purpose:
-
-Implementation of **U-Net Convolutional Neural Network architecture** for future semantic segmentation training.
-
----
-
-# 🤖 Models and Algorithms
-
-## 1️⃣ Current Working Model — Baseline Segmentation
-
-The current system uses **HSV color segmentation combined with morphological filtering**.
-
-### Method
-
-The algorithm detects high brightness and low saturation regions that may correspond to coral bleaching.
-
-### Process
-
-1. Convert RGB image to HSV color space  
-2. Detect low saturation and high brightness pixels  
-3. Apply morphological filtering to remove noise  
-4. Generate segmentation mask  
-5. Calculate percentage of affected coral area  
-
-### Libraries Used
-
-- OpenCV  
-- NumPy  
-
-### Output
-
-- Binary segmentation mask  
-- Coral damage overlay visualization  
-- Estimated bleaching percentage  
-
----
-
-## 2️⃣ Deep Learning Model — U-Net Architecture
-
-Future versions of CoralSight will integrate a **U-Net Convolutional Neural Network** for semantic segmentation.
-
-### Framework
-
-TensorFlow / Keras
-
-### Architecture Type
-
-Encoder–Decoder CNN with skip connections.
-
-### Input
-
-224 × 224 × 3 RGB image
-
-### Output
-
-Pixel-wise segmentation map.
-
-### Target Classes
-
-- Healthy coral  
-- Bleached coral  
-- Diseased coral  
-- Algae-covered coral  
-
-### Why U-Net
-
-U-Net is widely used for segmentation tasks requiring precise object boundaries such as:
-
-- medical imaging  
-- satellite imagery  
-- environmental monitoring  
-
----
-
-# 🔄 Image Processing Pipeline
-
-```
-Image Upload
-     ↓
-Image Preprocessing
-     ↓
-Color Segmentation
-     ↓
-Noise Removal
-     ↓
-Mask Generation
-     ↓
-Affected Area Calculation
-     ↓
-Overlay Visualization
-     ↓
-Result Display
+User uploads reef image via browser
+            ↓
+    React (Vite) Frontend
+            ↓
+    Flask REST API  (server.py)
+            ↓
+    Image Preprocessing (OpenCV)
+     → RGB to HSV conversion
+     → Low saturation + high brightness detection
+     → Morphological filtering & noise removal
+            ↓
+    Segmentation Mask Generation
+            ↓
+    Damage Percentage Calculation
+            ↓
+    Overlay Visualization (OpenCV)
+            ↓
+    JSON response → Frontend
+            ↓
+    Side-by-side display + Pie chart render
 ```
 
 ---
 
-# ⭐ Key Features
+## 🛠️ Tech Stack
 
-- Automated coral reef image analysis  
-- Coral bleaching region detection  
-- Coral damage percentage estimation  
-- Overlay visualization of affected areas  
-- Offline image processing capability  
-- Interactive web interface  
-- Extendable deep learning segmentation architecture  
+### Frontend
+| Tech | Purpose |
+|---|---|
+| React + Vite | UI framework and fast dev server |
+| JavaScript ES6+ | Application logic |
+| Tailwind CSS | Styling |
+| Chart.js / Recharts | Interactive pie chart with hover tooltips |
+| HTML5 / CSS3 | Structure and layout |
+
+### Backend
+| Tech | Purpose |
+|---|---|
+| Python 3.x | Core runtime |
+| Flask | REST API server |
+| Flask-CORS | Cross-origin request handling |
+
+### Computer Vision
+| Tech | Purpose |
+|---|---|
+| OpenCV | Image processing, color space conversion, overlay rendering |
+| NumPy | Array operations, mask manipulation |
+
+### Deep Learning
+| Tech | Purpose |
+|---|---|
+| TensorFlow | Deep learning framework |
+| Keras | U-Net model definition and training API |
 
 ---
 
-# 📂 Project Folder Structure
+## 🤖 Models In Detail
+
+### Model 1 — HSV Baseline Segmentation (Active)
+
+The currently deployed model uses classical computer vision. It's fast, offline, requires no GPU, and works immediately on any coral image.
+
+**How it works:**
+1. Convert uploaded image from **RGB → HSV** color space
+2. Detect pixels with **low saturation + high brightness** — the optical signature of bleached coral
+3. Apply **morphological operations** (dilation, erosion) to remove noise and fill gaps
+4. Generate a **binary segmentation mask** over affected regions
+5. Calculate the **percentage of masked pixels** relative to total image area
+6. Render a **colored overlay** on the original image and return to frontend
+
+**Output:** Binary mask + percentage damage + overlay image
+
+---
+
+### Model 2 — U-Net CNN Semantic Segmentation (Architecture Complete)
+
+A full **U-Net convolutional neural network** is implemented and ready for training.
+
+**Architecture:** Encoder–Decoder with skip connections
 
 ```
-coralsight/
+Input (224×224×3)
+    → Encoder (contracting path): Conv → MaxPool × 4
+    → Bottleneck
+    → Decoder (expanding path): UpSample → Conv × 4  [+ skip connections]
+    → Output: Pixel-wise segmentation map
+```
+
+**Target classes:**
+- 🟢 Healthy coral
+- 🔴 Bleached coral  
+- 🟡 Diseased coral
+- 🟤 Algae-covered coral
+
+**Why U-Net:** Widely used in biomedical and environmental segmentation tasks requiring precise object boundaries. Skip connections preserve fine-grained spatial details lost during downsampling — critical for accurate reef boundary detection.
+
+---
+
+## 📂 Project Structure
+
+```
+CoralReefVisionAI/
 │
-├── backend/
-│   ├── ai/
-│   │   └── segmentation/
-│   │       ├── service.py
-│   │       ├── unet.py
-│   │       └── segment.py
-│   │
-│   ├── uploads/
-│   └── results/
+├── coralsight-main/
+│   └── backend/
+│       └── ai/
+│           └── segmentation/
+│               ├── service.py       # Main segmentation service
+│               ├── unet.py          # U-Net CNN architecture (TF/Keras)
+│               └── segment.py       # HSV segmentation algorithm
 │
 ├── src/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
+│   ├── App.jsx                      # Main React component
+│   ├── main.jsx                     # React entry point
+│   └── index.css                    # Global styles
 │
-├── public/
-├── server.py
-├── package.json
-├── vite.config.js
-└── README.md
+├── models/                          # Model weights directory
+├── scripts/                         # Utility scripts
+│
+├── server.py                        # Flask API server
+├── index.html                       # Vite HTML entry
+├── package.json                     # Node dependencies
+├── vite.config.js                   # Vite build config
+├── tailwind.config.js               # Tailwind CSS config
+├── postcss.config.js                # PostCSS config
+└── Readme.md
 ```
 
 ---
 
-# 📊 Dataset Sources
+## 🚀 Getting Started
 
-Future model training will use publicly available coral reef datasets such as:
+### Prerequisites
+- Node.js 18+
+- Python 3.8+
+- pip
 
-- CoralNet dataset  
-- ReefBase coral image repository  
-- NOAA coral reef monitoring datasets  
-
-These datasets contain labeled coral reef images used in marine ecosystem research.
-
----
-
-# ⚠ Limitations
-
-Current limitations include:
-
-- HSV segmentation may detect bright objects unrelated to coral bleaching  
-- CNN training pipeline not yet integrated  
-- Dataset labeling required for accurate model training  
-
----
-
-# 🔮 Future Improvements
-
-Planned improvements include:
-
-- Training U-Net on coral reef datasets  
-- Multi-class coral health classification  
-- Temporal coral monitoring  
-- Historical reef health analysis  
-- Exportable coral damage reports  
-- Batch reef image processing  
-- Cloud deployment for large-scale reef monitoring  
-
----
-
-# 💻 Installation
-
-Clone repository
-
+### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/coralsight.git
-cd coralsight
+git clone https://github.com/kshitijsrivastavaa/CoralReefVisionAI.git
+cd CoralReefVisionAI
 ```
 
-Install dependencies
-
+### 2. Install frontend dependencies
 ```bash
 npm install
 ```
 
-Run development server
+### 3. Install backend dependencies
+```bash
+pip install flask flask-cors opencv-python numpy tensorflow
+```
 
+### 4. Start the Flask backend
+```bash
+python server.py
+```
+
+### 5. Start the React frontend
 ```bash
 npm run dev
 ```
 
-Open browser
-
+### 6. Open in browser
 ```
 http://localhost:5173
 ```
 
 ---
 
-# 🚀 Build for Production
+## 🌐 Deployment
 
-```
+**Frontend** is deployed on Netlify:
+🔗 [https://shiny-bunny-ba12ea.netlify.app/](https://shiny-bunny-ba12ea.netlify.app/)
+
+> ⚠️ The live Netlify link runs the frontend only. The Flask backend (image processing) must be run locally for full functionality.
+
+**To build for production:**
+```bash
 npm run build
 ```
-
-Production files will be generated inside the **dist** directory.
-
----
-
-# 🌐 Deployment
-
-Frontend deployed using **Netlify**
-
-Live demo:
-
-https://shiny-bunny-ba12ea.netlify.app/
-
-Backend API runs locally using **Flask**.
+Output goes to the `dist/` directory.
 
 ---
 
-# 🎓 Intended Use
+## 📊 Sample Results
 
-This project is designed for:
-
-- educational purposes  
-- research demonstrations  
-- coral reef monitoring experiments  
-
-It is **not a certified scientific diagnostic tool**.
+| Image | Affected Area | Interpretation |
+|---|---|---|
+| `coral 3img.jpeg` | **40.39%** | Significant bleaching — moderate-high stress |
+| `coral2pic.jpeg` | **21.25%** | Early-stage bleaching detected |
+| `coral img 4.jpeg` | **7.25%** | Mostly healthy reef, minor stress zones |
 
 ---
 
-# 🤝 Contributing
+## 📚 Dataset Sources
 
-Contributions are welcome.
+Future U-Net training will use publicly available labeled coral datasets:
 
-If you would like to improve CoralSight:
-
-1. Fork the repository  
-2. Create a feature branch  
-3. Submit a pull request  
+- [CoralNet](https://coralnet.ucsd.edu/) — Point annotation platform for benthic imagery
+- [ReefBase](http://www.reefbase.org/) — Global coral reef monitoring database
+- [NOAA Coral Reef Watch](https://coralreefwatch.noaa.gov/) — Satellite-derived reef monitoring data
 
 ---
 
-# 📜 License
+## ⚠️ Current Limitations
 
-This project is intended for **educational and academic research purposes**. 
-kshitij.srivastava16@gmail.com
+- HSV segmentation may flag bright non-coral objects (e.g., light reflections, sandy patches) as bleached
+- U-Net CNN training pipeline not yet connected — labeled dataset required
+- Backend must be run locally; no cloud-hosted API currently
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Train U-Net on labeled coral datasets (CoralNet / NOAA)
+- [ ] Replace HSV baseline with trained CNN inference
+- [ ] Multi-class output: healthy / bleached / diseased / algae
+- [ ] Temporal monitoring — compare reef health across dates
+- [ ] Batch image processing for large-scale surveys
+- [ ] Exportable PDF damage reports
+- [ ] Cloud API deployment for remote access
+- [ ] Mobile-responsive UI improvements
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome — especially around model training and dataset integration.
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push to branch: `git push origin feature/your-feature`
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is built for **educational and academic research purposes**.
+
+For questions or collaborations: [kshitij.srivastava16@gmail.com](mailto:kshitij.srivastava16@gmail.com)
+
+---
+
+<div align="center">
+
+**Built to protect the reefs. 🪸**
+
+</div>

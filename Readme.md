@@ -1,199 +1,276 @@
 <div align="center">
 
-# 🌊 CoralSight — AI Coral Reef Health Assessment
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d7377,50:14a085,100:00d4aa&height=200&section=header&text=CoralSight&fontSize=70&fontColor=ffffff&fontAlignY=35&desc=AI%20Coral%20Reef%20Health%20Assessment&descAlignY=58&descSize=22&animation=fadeIn" width="100%"/>
 
-**An AI-powered full-stack system for coral reef bleaching detection, damage quantification, and marine ecosystem monitoring using computer vision and deep learning.**
+<br/>
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Netlify-00C7B7?style=for-the-badge)](https://shiny-bunny-ba12ea.netlify.app/)
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![React](https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
-[![Flask](https://img.shields.io/badge/Flask-API-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00D4AA&center=true&vCenter=true&width=700&lines=Coral+Reef+Bleaching+Detection+%F0%9F%AA%B8;Real-Time+AI+Segmentation+Overlay;Computer+Vision+%2B+Deep+Learning;Protecting+Marine+Ecosystems+with+AI)](https://git.io/typing-svg)
+
+<br/>
+
+<a href="https://shiny-bunny-ba12ea.netlify.app/">
+  <img src="https://img.shields.io/badge/🌐_Live_Demo-Netlify-00C7B7?style=for-the-badge&labelColor=0d7377" />
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/🎬_Demo_Video-Watch_Now-FF4757?style=for-the-badge&labelColor=c0392b" />
+</a>
+<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/TensorFlow-Keras-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Flask-API-000000?style=for-the-badge&logo=flask&logoColor=white" />
+<img src="https://img.shields.io/badge/OpenCV-Vision-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
+
+<br/><br/>
+
+> **An AI-powered full-stack system for coral reef bleaching detection, damage quantification, and marine ecosystem monitoring — combining real-time computer vision with a deep learning segmentation architecture.**
+
+<br/>
 
 </div>
 
 ---
 
-## 📽️ Demo Video
+## 🎬 Demo Video
 
-> 🎬 **[https://github.com/user-attachments/assets/629f8b71-8537-4b70-a256-738d971ee59c]**
+<div align="center">
 
-The demo showcases:
-- Uploading real underwater coral reef photographs
-- Live HSV segmentation overlay rendering over the original image
-- Coral damage percentage calculated instantly
-- Interactive pie chart showing healthy vs. affected area breakdown
-- Multiple reef images tested — ranging from 7.25% to 40.39% affected area
+> 🔗 **[▶️ Watch Full Demo — ADD YOUR VIDEO LINK HERE](https://github.com/kshitijsrivastavaa/CoralReefVisionAI)**
+
+</div>
+
+**What the demo shows:**
+- 📤 Uploading real underwater coral reef photographs via the web UI
+- 🎨 Live pink/red HSV segmentation overlay rendering on the original image
+- 📊 Coral damage percentage calculated and displayed instantly
+- 🥧 Interactive pie chart with hover tooltips (Healthy vs. Affected)
+- 🔁 Multiple reef images tested — results ranging from **7.25% to 40.39%** affected area
 
 ---
 
-## 📸 What It Looks Like
+## ✨ Live Output Preview
 
-| Original Reef Image | AI Segmentation Overlay |
+<div align="center">
+
+| 🖼️ Original Reef Image | 🔬 AI Segmentation Overlay |
+|:---:|:---:|
+| Raw underwater coral photograph | Pink/red mask highlighting bleached & stressed coral regions |
+| ↓ | ↓ |
+| **Input** | **OpenCV HSV Pipeline Output** |
+
+</div>
+
+**Each analysis produces:**
+- 🔴 Color overlay showing exact damaged reef zones
+- 📈 `Affected Area: X.XX%` — precise numerical damage score
+- 🥧 Interactive pie chart — hover to see `Healthy: XX.XX` and `Affected: XX.XX`
+
+---
+
+## 🌍 Why This Project Exists
+
+<details>
+<summary><b>🪸 Click to read — The Coral Crisis</b></summary>
+
+<br/>
+
+Coral reefs cover **less than 1% of the ocean floor** yet support **over 25% of all marine species**. They are collapsing at an unprecedented rate due to:
+
+| Threat | Impact |
 |---|---|
-| Raw underwater coral photograph | Pink/red overlay highlighting bleached & damaged coral regions |
+| 🌡️ Rising ocean temperatures | Mass bleaching events, coral death |
+| 🧪 Ocean acidification | Dissolves coral calcium carbonate structures |
+| 🏭 Marine pollution & runoff | Smothers coral, blocks photosynthesis |
+| 🦠 Coral disease outbreaks | Rapid colony die-offs |
+| 🌿 Algae overgrowth | Outcompetes healthy coral for space |
 
-**Output includes:**
-- Side-by-side original vs. segmented view
-- `Affected Area: X.XX%` — precise damage percentage
-- Interactive damage distribution pie chart with hover tooltips
+Traditional reef monitoring requires **trained divers** performing **manual underwater surveys** — expensive, slow, and impossible to scale globally.
 
----
+**CoralSight automates reef health assessment from a single photograph.** One image. Seconds. A damage report.
 
-## 🌍 Why This Exists
-
-Coral reefs cover less than 1% of the ocean floor but support over 25% of all marine species. They are under severe threat from:
-
-- 🌡️ Rising ocean temperatures causing mass bleaching events
-- 🧪 Ocean acidification dissolving coral structures
-- 🏭 Marine pollution and runoff
-- 🦠 Coral disease outbreaks
-- 🌿 Algae overgrowth smothering healthy reefs
-
-Traditional monitoring relies on **manual diver surveys** — slow, expensive, and impossible to scale. CoralSight automates reef health assessment from a single photograph, making large-scale monitoring accessible to researchers, conservationists, and institutions worldwide.
+</details>
 
 ---
 
-## ✅ Working Features
+## ⚡ Features
 
-### 🔬 Computer Vision Segmentation Pipeline (Live & Functional)
-- Upload any underwater coral reef image via the web interface
-- Image is sent to the Flask backend and processed through an **HSV color segmentation pipeline**
-- Bleached/stressed coral regions (high brightness, low saturation) are detected automatically
-- **Morphological filtering** cleans noise and sharpens the mask
-- A **pink/red overlay** is rendered on the original image highlighting damaged zones
-- Results returned to the frontend and displayed in real-time
+<details open>
+<summary><b>🔬 Real-Time CV Segmentation Pipeline — LIVE & WORKING</b></summary>
 
-### 📊 Coral Damage Quantification (Live & Functional)
-- Calculates the **exact percentage of affected reef area** per image
-- Results displayed as `Affected Area: X.XX%`
-- Tested across multiple real coral images with varying damage levels (7–40% range seen in demo)
+<br/>
 
-### 🥧 Interactive Damage Distribution Chart (Live & Functional)
-- Pie chart rendering healthy vs. affected coral proportions
-- **Hover tooltips** show exact values (e.g., `Healthy: 92.75`, `Affected: 7.25`)
-- Built with a charting library for smooth interactive UX
+Upload any coral reef image → get back a segmentation overlay and damage score in seconds.
 
-### 🖼️ Side-by-Side Comparison View (Live & Functional)
-- Original Image displayed on the left
-- AI Segmentation Overlay displayed on the right
-- Enables immediate visual verification of what the algorithm detected
+**Pipeline steps:**
+1. Image received by Flask API and preprocessed
+2. Converted from **RGB → HSV** color space
+3. Pixels with **low saturation + high brightness** are flagged (optical signature of bleached coral)
+4. **Morphological filtering** (dilation + erosion) removes noise and sharpens mask edges
+5. Binary segmentation mask generated over affected zones
+6. **Damage percentage** calculated from masked pixel ratio
+7. **Colored overlay rendered** on original image via OpenCV
+8. Results returned as JSON → React frontend renders instantly
 
-### 🤖 U-Net Deep Learning Architecture (Implemented, Training-Ready)
-- Full **encoder–decoder U-Net CNN** implemented in TensorFlow/Keras
-- Designed for 4-class pixel-wise segmentation:
-  - Healthy coral
-  - Bleached coral
-  - Diseased coral
-  - Algae-covered coral
-- Input: `224 × 224 × 3` RGB images
-- Output: Pixel-wise segmentation map
-- Architecture complete — awaiting labeled dataset for training run
+</details>
+
+<details>
+<summary><b>📊 Coral Damage Quantification — LIVE & WORKING</b></summary>
+
+<br/>
+
+Every image produces an exact affected area score:
+
+| Image Tested | Affected Area | Health Status |
+|---|---|---|
+| `coral 3img.jpeg` | **40.39%** | 🔴 Significant bleaching — high stress |
+| `coral2pic.jpeg` | **21.25%** | 🟡 Early-stage bleaching detected |
+| `coral img 4.jpeg` | **7.25%** | 🟢 Mostly healthy, minor stress zones |
+
+</details>
+
+<details>
+<summary><b>🥧 Interactive Damage Distribution Chart — LIVE & WORKING</b></summary>
+
+<br/>
+
+- Pie chart renders the **Healthy vs. Affected** split per image
+- **Hover tooltips** show exact values (e.g. `Healthy: 92.75`, `Affected: 7.25`)
+- Color-coded: green = healthy, red = affected
+- Powered by a JavaScript charting library (Recharts / Chart.js)
+
+</details>
+
+<details>
+<summary><b>🖼️ Side-by-Side Comparison View — LIVE & WORKING</b></summary>
+
+<br/>
+
+- **Left panel:** original uploaded reef photograph
+- **Right panel:** AI segmentation overlay with bleaching zones highlighted in pink/red
+- Immediate visual validation of what the algorithm detected
+- Overlay is proportionally sized and aligned to the original
+
+</details>
+
+<details>
+<summary><b>🤖 U-Net Deep Learning Architecture — IMPLEMENTED & TRAINING-READY</b></summary>
+
+<br/>
+
+A full **U-Net CNN** for semantic segmentation is implemented in TensorFlow/Keras:
+
+```
+Input (224 × 224 × 3 RGB)
+        ↓
+┌─── Encoder (Contracting Path) ───┐
+│  Conv2D → BN → ReLU              │
+│  MaxPool2D                        │  × 4 levels
+│  (skip connection saved) ─────────┼──────────┐
+└──────────────────────────────────┘           │
+        ↓                                      │
+   Bottleneck (deepest features)               │
+        ↓                                      │
+┌─── Decoder (Expanding Path) ─────┐           │
+│  UpSampling2D                    │           │
+│  Concat ← skip connection ────────┼───────────┘
+│  Conv2D → BN → ReLU              │  × 4 levels
+└──────────────────────────────────┘
+        ↓
+Output: Pixel-wise segmentation map
+(4 classes: Healthy / Bleached / Diseased / Algae)
+```
+
+**Why U-Net?** Skip connections preserve spatial detail lost during downsampling — critical for precise reef boundary detection. Used in medical imaging, satellite analysis, and environmental monitoring with excellent results on limited datasets.
+
+</details>
 
 ---
 
 ## 🏗️ System Architecture
 
 ```
-User uploads reef image via browser
-            ↓
-    React (Vite) Frontend
-            ↓
-    Flask REST API  (server.py)
-            ↓
-    Image Preprocessing (OpenCV)
-     → RGB to HSV conversion
-     → Low saturation + high brightness detection
-     → Morphological filtering & noise removal
-            ↓
-    Segmentation Mask Generation
-            ↓
-    Damage Percentage Calculation
-            ↓
-    Overlay Visualization (OpenCV)
-            ↓
-    JSON response → Frontend
-            ↓
-    Side-by-side display + Pie chart render
+                    ┌─────────────────────────────┐
+                    │     React + Vite Frontend    │
+                    │  Upload · View · Chart · UI  │
+                    └──────────────┬──────────────┘
+                                   │ HTTP POST (multipart/form-data)
+                    ┌──────────────▼──────────────┐
+                    │       Flask REST API          │
+                    │         server.py             │
+                    └──────────────┬──────────────┘
+                                   │
+                    ┌──────────────▼──────────────┐
+                    │   Image Processing Pipeline  │
+                    │  coralsight/backend/ai/       │
+                    │  segmentation/service.py      │
+                    └──────────────┬──────────────┘
+                         ┌─────────┴─────────┐
+                         ▼                   ▼
+              ┌─────────────────┐   ┌─────────────────┐
+              │ segment.py      │   │ unet.py          │
+              │ HSV Segmentation│   │ U-Net CNN        │
+              │ (Active)        │   │ (Architecture)   │
+              └────────┬────────┘   └─────────────────┘
+                       │
+              ┌────────▼────────┐
+              │  Mask + Overlay  │
+              │  Generation      │
+              │  (OpenCV/NumPy)  │
+              └────────┬────────┘
+                       │ JSON response
+                    ┌──▼──────────────────────────┐
+                    │  Frontend renders:           │
+                    │  • Side-by-side images       │
+                    │  • Damage % score            │
+                    │  • Interactive pie chart     │
+                    └─────────────────────────────┘
 ```
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-| Tech | Purpose |
-|---|---|
-| React + Vite | UI framework and fast dev server |
-| JavaScript ES6+ | Application logic |
-| Tailwind CSS | Styling |
-| Chart.js / Recharts | Interactive pie chart with hover tooltips |
-| HTML5 / CSS3 | Structure and layout |
+<details>
+<summary><b>View full stack breakdown</b></summary>
 
-### Backend
-| Tech | Purpose |
+<br/>
+
+**Frontend**
+| Tech | Role |
+|---|---|
+| React + Vite | UI framework, fast HMR dev server |
+| Tailwind CSS | Utility-first styling |
+| Chart.js / Recharts | Interactive pie chart with hover tooltips |
+| JavaScript ES6+ | Application logic |
+
+**Backend**
+| Tech | Role |
 |---|---|
 | Python 3.x | Core runtime |
-| Flask | REST API server |
-| Flask-CORS | Cross-origin request handling |
+| Flask | Lightweight REST API server |
+| Flask-CORS | Cross-origin request handling for dev |
 
-### Computer Vision
-| Tech | Purpose |
+**Computer Vision**
+| Tech | Role |
 |---|---|
-| OpenCV | Image processing, color space conversion, overlay rendering |
-| NumPy | Array operations, mask manipulation |
+| OpenCV | Color space conversion, morphological ops, overlay rendering |
+| NumPy | Array operations, mask arithmetic |
 
-### Deep Learning
-| Tech | Purpose |
+**Deep Learning**
+| Tech | Role |
 |---|---|
 | TensorFlow | Deep learning framework |
-| Keras | U-Net model definition and training API |
+| Keras | U-Net architecture definition, training API |
 
----
-
-## 🤖 Models In Detail
-
-### Model 1 — HSV Baseline Segmentation (Active)
-
-The currently deployed model uses classical computer vision. It's fast, offline, requires no GPU, and works immediately on any coral image.
-
-**How it works:**
-1. Convert uploaded image from **RGB → HSV** color space
-2. Detect pixels with **low saturation + high brightness** — the optical signature of bleached coral
-3. Apply **morphological operations** (dilation, erosion) to remove noise and fill gaps
-4. Generate a **binary segmentation mask** over affected regions
-5. Calculate the **percentage of masked pixels** relative to total image area
-6. Render a **colored overlay** on the original image and return to frontend
-
-**Output:** Binary mask + percentage damage + overlay image
-
----
-
-### Model 2 — U-Net CNN Semantic Segmentation (Architecture Complete)
-
-A full **U-Net convolutional neural network** is implemented and ready for training.
-
-**Architecture:** Encoder–Decoder with skip connections
-
-```
-Input (224×224×3)
-    → Encoder (contracting path): Conv → MaxPool × 4
-    → Bottleneck
-    → Decoder (expanding path): UpSample → Conv × 4  [+ skip connections]
-    → Output: Pixel-wise segmentation map
-```
-
-**Target classes:**
-- 🟢 Healthy coral
-- 🔴 Bleached coral  
-- 🟡 Diseased coral
-- 🟤 Algae-covered coral
-
-**Why U-Net:** Widely used in biomedical and environmental segmentation tasks requiring precise object boundaries. Skip connections preserve fine-grained spatial details lost during downsampling — critical for accurate reef boundary detection.
+</details>
 
 ---
 
 ## 📂 Project Structure
+
+<details>
+<summary><b>View file tree</b></summary>
+
+<br/>
 
 ```
 CoralReefVisionAI/
@@ -202,147 +279,151 @@ CoralReefVisionAI/
 │   └── backend/
 │       └── ai/
 │           └── segmentation/
-│               ├── service.py       # Main segmentation service
-│               ├── unet.py          # U-Net CNN architecture (TF/Keras)
-│               └── segment.py       # HSV segmentation algorithm
+│               ├── service.py       ← Segmentation orchestration
+│               ├── unet.py          ← U-Net CNN (TF/Keras)
+│               └── segment.py       ← HSV segmentation algorithm
 │
 ├── src/
-│   ├── App.jsx                      # Main React component
-│   ├── main.jsx                     # React entry point
-│   └── index.css                    # Global styles
+│   ├── App.jsx                      ← Main React component
+│   ├── main.jsx                     ← React entry point
+│   └── index.css                    ← Global styles (Tailwind)
 │
-├── models/                          # Model weights directory
-├── scripts/                         # Utility scripts
+├── models/                          ← Model weights (training output)
+├── scripts/                         ← Utility & helper scripts
 │
-├── server.py                        # Flask API server
-├── index.html                       # Vite HTML entry
-├── package.json                     # Node dependencies
-├── vite.config.js                   # Vite build config
-├── tailwind.config.js               # Tailwind CSS config
-├── postcss.config.js                # PostCSS config
+├── server.py                        ← Flask API server
+├── index.html                       ← Vite HTML entry
+├── package.json                     ← Node dependencies
+├── vite.config.js                   ← Vite build config
+├── tailwind.config.js               ← Tailwind config
 └── Readme.md
 ```
+
+</details>
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 18+
-- Python 3.8+
-- pip
+<details>
+<summary><b>📦 Installation & Setup</b></summary>
 
-### 1. Clone the repository
+<br/>
+
+**1. Clone the repository**
 ```bash
 git clone https://github.com/kshitijsrivastavaa/CoralReefVisionAI.git
 cd CoralReefVisionAI
 ```
 
-### 2. Install frontend dependencies
+**2. Install frontend dependencies**
 ```bash
 npm install
 ```
 
-### 3. Install backend dependencies
+**3. Install backend dependencies**
 ```bash
 pip install flask flask-cors opencv-python numpy tensorflow
 ```
 
-### 4. Start the Flask backend
+**4. Start the Flask backend**
 ```bash
 python server.py
 ```
 
-### 5. Start the React frontend
+**5. Start the React frontend** (new terminal)
 ```bash
 npm run dev
 ```
 
-### 6. Open in browser
+**6. Open in browser**
 ```
 http://localhost:5173
 ```
 
----
+</details>
 
-## 🌐 Deployment
+<details>
+<summary><b>🌐 Deployment</b></summary>
 
-**Frontend** is deployed on Netlify:
+<br/>
+
+**Frontend** → Deployed on Netlify
 🔗 [https://shiny-bunny-ba12ea.netlify.app/](https://shiny-bunny-ba12ea.netlify.app/)
 
-> ⚠️ The live Netlify link runs the frontend only. The Flask backend (image processing) must be run locally for full functionality.
+> ⚠️ The Netlify deployment runs the **frontend only**. The Flask image processing backend must be run locally for full segmentation functionality.
 
-**To build for production:**
+**Build for production:**
 ```bash
 npm run build
+# Output in /dist directory
 ```
-Output goes to the `dist/` directory.
 
----
-
-## 📊 Sample Results
-
-| Image | Affected Area | Interpretation |
-|---|---|---|
-| `coral 3img.jpeg` | **40.39%** | Significant bleaching — moderate-high stress |
-| `coral2pic.jpeg` | **21.25%** | Early-stage bleaching detected |
-| `coral img 4.jpeg` | **7.25%** | Mostly healthy reef, minor stress zones |
+</details>
 
 ---
 
 ## 📚 Dataset Sources
 
-Future U-Net training will use publicly available labeled coral datasets:
+<details>
+<summary><b>View datasets used & planned for U-Net training</b></summary>
 
-- [CoralNet](https://coralnet.ucsd.edu/) — Point annotation platform for benthic imagery
-- [ReefBase](http://www.reefbase.org/) — Global coral reef monitoring database
-- [NOAA Coral Reef Watch](https://coralreefwatch.noaa.gov/) — Satellite-derived reef monitoring data
+<br/>
 
----
+| Dataset | Description | Use |
+|---|---|---|
+| [CoralNet](https://coralnet.ucsd.edu/) | Point annotation platform for benthic images | U-Net training labels |
+| [ReefBase](http://www.reefbase.org/) | Global coral reef monitoring database | Diverse reef imagery |
+| [NOAA Coral Reef Watch](https://coralreefwatch.noaa.gov/) | Satellite-derived reef monitoring data | Ground truth + validation |
 
-## ⚠️ Current Limitations
-
-- HSV segmentation may flag bright non-coral objects (e.g., light reflections, sandy patches) as bleached
-- U-Net CNN training pipeline not yet connected — labeled dataset required
-- Backend must be run locally; no cloud-hosted API currently
+</details>
 
 ---
 
 ## 🔮 Roadmap
 
-- [ ] Train U-Net on labeled coral datasets (CoralNet / NOAA)
-- [ ] Replace HSV baseline with trained CNN inference
+- [x] HSV baseline segmentation pipeline
+- [x] Flask REST API for image processing
+- [x] React frontend with image upload
+- [x] Side-by-side original vs. overlay display
+- [x] Damage percentage calculation
+- [x] Interactive pie chart with hover tooltips
+- [x] U-Net CNN architecture implementation
+- [x] Netlify frontend deployment
+- [ ] Train U-Net on labeled coral datasets
+- [ ] Replace HSV with trained CNN inference
 - [ ] Multi-class output: healthy / bleached / diseased / algae
 - [ ] Temporal monitoring — compare reef health across dates
-- [ ] Batch image processing for large-scale surveys
+- [ ] Batch image processing for large-scale reef surveys
 - [ ] Exportable PDF damage reports
-- [ ] Cloud API deployment for remote access
-- [ ] Mobile-responsive UI improvements
+- [ ] Cloud API deployment
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome — especially around model training and dataset integration.
+Contributions welcome — especially around **model training and dataset integration**.
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'Add your feature'`
-4. Push to branch: `git push origin feature/your-feature`
+3. Commit: `git commit -m 'Add your feature'`
+4. Push: `git push origin feature/your-feature`
 5. Open a Pull Request
 
 ---
 
 ## 📜 License
 
-This project is built for **educational and academic research purposes**.
-
-For questions or collaborations: [kshitij.srivastava16@gmail.com](mailto:kshitij.srivastava16@gmail.com)
+Built for **educational and academic research purposes**.
+Contact: [kshitij.srivastava16@gmail.com](mailto:kshitij.srivastava16@gmail.com)
 
 ---
 
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4aa,50:14a085,100:0d7377&height=120&section=footer&animation=fadeIn" width="100%"/>
+
 **Built to protect the reefs. 🪸**
+
 
 </div>

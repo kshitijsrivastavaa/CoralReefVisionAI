@@ -16,7 +16,7 @@
 
 ## 📽️ Demo Video
 
-> 🎬 **[Watch Full Demo Here → ADD YOUR VIDEO LINK]**
+> 🎬 **[https://github.com/user-attachments/assets/629f8b71-8537-4b70-a256-738d971ee59c]**
 
 The demo showcases:
 - Uploading real underwater coral reef photographs

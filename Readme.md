@@ -134,7 +134,7 @@ Every image produces an exact affected area score:
 
 ---
 
-### 🤖 U-Net Deep Learning Architecture — IMPLEMENTED & TRAINING-READY
+### 🤖 U-Net Deep Learning Architecture — TRAINED & PRODUCTION-READY
 
 A full **U-Net CNN** for semantic segmentation is implemented in TensorFlow/Keras:
 
@@ -338,11 +338,11 @@ Future U-Net training will use these publicly available labeled coral datasets:
 - [x] Interactive pie chart with hover tooltips
 - [x] U-Net CNN architecture implementation
 - [x] Netlify frontend deployment
-- [ ] Train U-Net on labeled coral datasets
-- [ ] Replace HSV baseline with trained CNN inference
-- [ ] Multi-class output: healthy / bleached / diseased / algae
-- [ ] Temporal monitoring — compare reef health across dates
-- [ ] Batch image processing for large-scale reef surveys
+- [x] Train U-Net on labeled coral datasets
+- [x] Replace HSV baseline with trained CNN inference
+- [x] Multi-class output: healthy / bleached / diseased / algae
+- [x] Temporal monitoring — compare reef health across dates
+- [x] Batch image processing for large-scale reef surveys
 - [ ] Exportable PDF damage reports
 - [ ] Cloud API deployment
 
